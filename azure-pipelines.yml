@@ -23,7 +23,6 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/jenkins/currency-exchange-microservice/Dockerfile'
-        tags: |
-          $(tag)
+        command: 'build'
+        Dockerfile: 'devops-master-class-1/projects/hello-world/hello-world-java/Dockerfile'
+        tags: '$(tag)'
